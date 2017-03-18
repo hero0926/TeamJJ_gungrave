@@ -1,0 +1,9 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 3612: end of line expected.
+    show team with dissolve at Position(xpos = 0, xanchor=0.3, ypos=0, yanchor=0)
+                            ^
+
+Ren'Py Version: Ren'Py 6.99.12.2.2029

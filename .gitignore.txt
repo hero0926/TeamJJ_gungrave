@@ -1,0 +1,4 @@
+game\bg\*.*
+game\bgm\*.*
+game\images\*.*
+game\saves\*.*
