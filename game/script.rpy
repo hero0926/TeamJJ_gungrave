@@ -2,6 +2,7 @@
 
 image team = im.Scale("/bg/team.jpg", 890, 420)
 image bg white = im.Scale("/bg/white.png", 1000, 1050)
+
 #거리
 image bg landscape = im.Scale("/bg/building2.jpg", 1000, 1050)
 image bg blurroad = im.Scale("/bg/blur_bg.jpg", 1000, 1050)
@@ -51,6 +52,13 @@ image bg univ2 = "/bg/univuniv.jpg"
 image bg cafeteria = "/bg/cafeteria.jpg"
 image bg classroom = im.Scale("/bg/univ2.jpg", 1000, 1050)
 image bg library = im.Scale("/bg/univ_library.jpg", 800, 1050)
+image bg univ_garden = im.Scale("/bg/univ_garden.jpg", 1000, 1050)
+
+image bg prom1 = im.Scale("/bg/prom1.jpg", 1000, 1050)
+image bg prom2 = im.Scale("/bg/prom2.jpg", 1000, 1050)
+image bg prom3 = im.Scale("/bg/prom3.jpg", 1000, 1050)
+image bg prom4 = im.Scale("/bg/prom4.jpg", 1000, 1050)
+
 
 #놀이공원
 image bg apark = "/bg/amusement_park.jpg"
@@ -89,7 +97,7 @@ image maria eyeclosed_blushed = im.Scale("m_eyeclosed_blush.png", 250, 500)
 image maria frightened = im.Scale("m_frightened.png", 250, 500)
 image maria frightened_cry = im.Scale("m_frightened_cry.png", 250, 500)
 image maria sad = im.Scale("m_sad.png", 250, 500)
-image maria sad_cry = im.Scale("m_sad_cryt.png", 250, 500)
+image maria sad_cry = im.Scale("m_sad_cry.png", 250, 500)
 image maria smile = im.Scale("m_smile.png", 250, 500)
 image maria smile_blush = im.Scale("m_smile_blush.png", 250, 500)
 
@@ -123,7 +131,7 @@ image brandon smile_glassess = im.Scale("b_smile_glassess.png", 290, 590)
 image mob default = im.Scale("mob.png", 290, 560)
 image mob2 default = im.Scale("mob2.png", 290, 550)
 image mob3 default = im.Scale("mob3.png", 290, 570)
-
+image daddy default = im.Scale("d_default.png", 270, 530)
 
 #캐릭터(Millenion)
 
@@ -133,11 +141,16 @@ image brandon2 default = im.Scale("b2_default.png", 310, 620)
 define b = Character('브랜든', color="#D3B9A5")
 define h = Character('해리', color="#2865cc")
 define m = Character('마리아', color="#FFC300")
+define d = Character('칼드웰', color="#fffaeb")
+
 
 define mob = Character('불량배', color="#f2f1ea")
 define k = Character('케니', color="#f2f1ea")
 define mag = Character('안내원', color="#f2f1ea")
 define f = Character('친구', color="#f2f1ea")
+define prom1 = Character('여학생', color="#f2f1ea")
+define prom2 = Character('남학생', color="#f2f1ea")
+
 
 # 게임 시작
 
@@ -2324,12 +2337,18 @@ label interlude8 :
     m "자, 따라오라구."    
     
     play sound "/bgm/stepdirt_1.wav"
-    scene bg grass with fade
+    scene bg univ_garden with fade
     
     play music "/bgm/Sunflower.mp3" fadeout 1.0 fadein 4.0 loop
     
+    "브랜든과 함께 여름의 교정을 거닐었다."
+    "날씨가 더워서 혹시 상하지 않을까, 아이스 박스에 도시락을 넣어서 챙겨왔다."
+    "나름 아침에 일찍 일어나서 만든 만큼, 브랜든이 좋아해줬으면 한다."
     
-    "브랜든과 함께 걸어서 털썩 앉은 곳은 잔디밭이었다."
+    play sound "/bgm/stepdirt_1.wav"
+    scene bg grass with fade
+    
+    "브랜든과 잔디밭에 앉아, 짐을 펼쳤다."
     
     show brandon default at left with fade
     show maria default at right with dissolve
@@ -3410,7 +3429,380 @@ label interlude10 :
     "브랜든은 얼굴을 붉힌 채로 묵묵히 걸었다."
     "간만에 만나서 함께한 시간이 너무나도 소중했다."
     "입김이 나오는 날씨에 거리를 걸으며, 이 분위기를 만끽하기로 했다."    
-   
+
+
+#4학년 여름, 프롬
+
+label prom :
+    
+    hide maria
+    hide brandon
+    
+    play sound "/bgm/button.wav"
+    play music "/bgm/One_Fine_Day.mp3" fadein 10.0 fadeout 4.0 loop
+    scene bg room with fade
+    
+    "그 후, 브랜든과 몇 번 더 만나 함께 식사를 하거나, 여러가지 일을 하며 시간을 보냈다."
+    "또 해가 지나가, 어느새 대학교 4학년이다."
+    "여기로 이사오면서, 대학교에 입학한 게 엊그제 같은데 벌써 졸업할 학년인가."
+    "4학년이 되니 거의 수업보다는, 여러가지 취업 컨설팅이나 특강을 듣느라 정신이 없었다."
+    
+    scene bg univ2 with fade
+    
+    show maria default with dissolve
+    
+    m "아, 오늘은 경영전략 컨설팅인가."
+    
+    "개강 후, 다양한 컨설팅 수업에 참가하고 있다."
+    "여러 기업들의 컨설팅 특강에 다니거나, 엑스포에 다녀오는 등 아주 바빴다."
+    "처음에는 회계라고는 이해도 못 했는데, 이제 채권분석이나 노사관계론에 대해서도 이해하게 된 자신이 조금 대견스러웠다."
+    
+    show maria smile with dissolve
+    
+    m "나름, 4년간 발전했다는 건가?"
+    
+    "4년간, 나의 진로에 대해서도 많이 고민해봤다."
+    "물론 당장 먹고 살 돈이 부족하다거나 한 것은 아니다. 칼드웰 아저씨께서 항상 지원해주시기 때문에..."
+    "그렇지만, 이 빚은 꼭 직접 갚고 싶었다."
+    "아저씨에게 미안하기도 해서지만, 성인으로서 언제까지 아저씨에게 기대서 살 수도 없는 노릇이라고 생각했기 때문이다."
+    
+    show maria default
+    
+    m "번듯한 직업을 구해서...아저씨께 용돈이라도 드리고 싶은데, 시기상조려나?"
+    
+    "칼드웰 아저씨는 번듯한 회사의 CEO시기 때문에, 의미없는 짓일지도 모른다."
+    "외려 예의에 어긋나는 짓일지도."
+    
+    m "그렇지만, 아저씨께 받은 게 너무 많기 때문에... 무어라도 갚고 싶은 거지."
+    
+    "그러려면, 역시 더 열심히 공부하지 않으면."
+    "그렇게 생각하며 도서관으로 향했다."
+    
+    show bg library with fade
+    
+    show maria default
+    
+    m "오늘은 고급회계원론이나 좀 보다가 갈까...."
+    
+    "도서관에는 여전히 사람이 많았다."
+    "곧 중간고사고, 나같은 4학년들도 많이 보였다."
+    
+    "자리에 앉아서 공부하고 있는데, 누군가 다가올 축제에 대해 얘기하는 소리가 들렸다."
+    
+    prom1 "이제 시험만 끝나면 프롬이다!"
+    prom2 "프롬이 아니지, 그건 고등학교때 하는 거고."
+    prom1 "그치만 내용은 비슷하잖아, 뭐 입을 거야?"
+    prom2 "글쎄... 뭐 입을지도 문제지만 파트너는 또 누구로 구하냐. 큰일이다."
+    
+    "프롬?"
+    "프롬이라고 하면..."
+    "아. 고등학교 학년 마지막으로 열리는 댄스 파티의 그 프롬인가."
+    "내가 다녔던 고등학교에는 그런 행사는 없었다."
+    "그래서 참여해 본 적도 없었다."
+    
+    prom1 "빨리 시험 끝나고 옷 고르고 싶다...."
+    prom2 "친구들도 불러야 하는데, 미리 말해두려구."
+    prom2 "이번에는 유명한 락 밴드도 온대서, 친구들 여럿 불러서 같이 놀 생각이야!"
+    
+    "와, 우리 학교에 저런 축제도 있었던가?"
+    "4학년이 될 때 까지 왜 모르고 있었지.... 충격적이다."
+    
+    prom1 "그나마 우린 3학년이니까 본행사에는 못 들어가잖아, 빨리 내년이 왔으면~"
+    prom2 "그래도 축제니까 준비는 해 둬야지, 안 그래?"
+    prom2 "나도 알렌 선배가 같이 가자고 하지 않을까? 아니려나...."
+    prom1 "꿈도 크셔!"
+    
+    "귀가 솔깃해졌다."
+    "다음에 친구들에게 프롬에 대해 물어보는것이 좋겠다."
+    
+    scene bg room with fade
+    
+    "집에 가서 친구들에게 전화해보자, 굉장히 호들갑을 떨며 프롬에 대해 설명해주었다."
+    
+    show maria default
+    
+    f "마리아, 프롬에 안 가봤다고?!"
+    f "난 마리아가 완전히 아가씨인줄 알았는데...의외다! 저번에 사교 댄스도 배우고 있다고 하지 않았어?"
+    m "응, 여름 방학동안 강습을 받으러 다닌 적이 있어."
+    f "난 그래서 와...벌써부터 마리아는 프롬 준비를 하는구나 이렇게 생각했지, 전혀 몰랐어."
+    f "고등학교때도 안 가본거야?"
+    
+    show maria eyeclosed
+    
+    m "학교에서 개최하지 않았거든... 그래서, 이번이 처음이야. 도서관에서 들었는데 곧 여름에 한다면서?"
+    f "응!  참가는 원칙적으로는 커플 한 쌍으로 하는 거야."
+    f "상대는 동급생이 아니여도 상관은 없어. 상급생과 하급생은 물론 졸업생과 학교 밖의 사람이라도 괜찮아."
+    m "강제로 누구랑 같이 오는 건 아닌가 보네... 옷은 뭘 입어?"
+    f "일반적으로 남성은 턱시도, 여성은 드레스에 코사지... 라고 하는데 자기 자유 아냐?"
+    f "그래도 보통 여자애들은 드레스 입는 걸 좋아하지."
+    f "그래, 부모님께 말씀드려 봐! 드레스 한 벌 맞춰 주실지도... 드레스를 입은 마리아 ㅡ 보고 싶다!"
+    f "만약 누구라도 드레스를 입으려면, 드레스 선택은 매우 중요하고 말야. 나, 카탈로그 잡지까지 있거든."
+    
+    show maria default
+    
+    m "프롬에서는, 뭘 하는 거야?"
+    f "춤 추고, 밥 먹고... 떠들고 뭐... 그냥 파티지. 파티"
+    f "이번 회장에서는 락 밴드도 온다니까 분위기도 살 걸."
+    m "친구들을 불러야 하나? 같이 올 사람이..."
+    f "어머 ㅡ 브랜든 씨 있잖아, 브랜든 씨! 이미 정해진 것 아니었어?"
+    
+    show maria default_blush
+    
+    f "나야말로 누구랑 가야 할지...걱정이야. 마리아가 아는 남자라도 있으면 꼭 데려와!"
+    
+    show maria sad
+    
+    m "아는 남자... 한 명 있기는 한데."
+    f "잘생겼어?"
+    
+    show maria eyeclosed
+    
+    m "음... 잘생긴 건 맞지. 잘 생겼는데..."
+    f "어머, 마리아. 잘 생기면 된 거지 남자는. 안 그래? 그럼 그 분도 같이 오시는 걸로 ㅡ "
+    
+    show maria frightened
+    
+    m "뭐, 잠깐만!"
+    
+    "친구는 한바탕 웃더니 전화를 끊었다."
+    "해리를 데려가도 괜찮을까...브랜든은 그렇다 치고..."
+    "시험이 끝나고 한 번 연락해보는것이 좋겠다."
+    
+    hide maria
+    
+    show bg room2 with fade
+    
+    stop music fadeout 3.0
+    "시험이 끝나고, 프롬에 초대할 사람을 구해야겠다고 생각한 나는, 브랜든에게 우선 전화했다."
+    
+    show maria smile at right
+    
+    m "여보세요?"
+    
+    show brandon smile at left with dissolve
+    
+    b "! 마리아."
+    b "오래간만이야."
+    
+    "상기된 브랜든의 목소리를 들으니 기분이 좋았다."
+    "뭐 기분좋은 일이라도 있는 걸까?"
+    
+    m "응, 별 일은 아니고... 아, 기분이 좋아 보이는걸, 브랜든... 뭐 기분좋은 일이라도 있어?"
+    b "응?"
+    
+    show brandon smile_blush at left with dissolve
+    
+    b "오랫만에, 마리아가 전화해 줬으니까."
+    
+    show maria eyeclosed_blushed at right with dissolve
+    
+    m "뭐, 뭐야..."
+    
+    "아무렇지도 않게 가끔씩 브랜든이 저런 말을 해올 때마다,"
+    "솔직히 정말 기분이 좋다."
+    "기분이 좋지만, 또 간질간질한 게 너무 부끄러워지는 것이다."
+    
+    show maria smile_blush at right
+    
+    m "별 건 아니고, 브랜든을 초대하고 싶은 곳이 있어서..."
+    m "괜찮으면,"
+    
+    "뭐야, 이거 의외로 떨린다."
+    "이거...그냥 데이트 신청을 하는 것 보다도 더 한발짝 나아간 듯한."
+    "어떻게 보면, 이런 장소에 불러낸다는 건... 그 의미는..."
+    
+    show maria frightened at right with dissolve
+    
+    m "학교축제에내파트너로와줄래"
+    
+    play sound "/bgm/Cartoon_Boing.mp3"
+    
+    "아 이런.... 이런, 아. 말을 너무 빨리 했다."
+    
+    show brandon oh at left with dissolve
+    
+    play sound "/bgm/Cartoon_Cowbell.mp3"
+    
+    b "에내파트...뭐라고?"
+    
+    show maria sad at right
+    
+    m "...."
+    
+    "이럴 때만 왜 하필 내 말을 못 알아듣는 것인가."
+    
+    show maria default at right
+    
+    m "....학교에서, 축제를 하는데... 음... 춤을 추고, 공연도 보고... 뭐 그런 축제야."
+    m "원래 한 사람하고 같이 가는 게.... 원칙인 모양이야."
+    m "그래서, 괜찮다면 브랜든을 내 파트너로, 부르고 싶어."
+    
+    "용기를 내서 다시 한 번 말했다."
+    
+    play music "/bgm/Where_She_Walks.mp3" fadein 1.0
+    
+    show maria default_blush at right
+    
+    m "브랜든 히트 씨, 제 파트너로 함꼐 해 주시겠어요?"
+    
+    show brandon oh_blush at left with dissolve
+    
+    b "마리아....."
+    b "네, 좋아요...."
+    
+    "응? 뭔가 이상한 분위기가 된 것 같은데, 아무래도 상관없나."
+    
+    b "그런데, 그러면 뭐라도 준비해서 가야 할 지...."
+    b "나는...이런 자리는 처음이라..."
+    
+    show maria smile_blush at right
+    
+    m "응? 아, 나도 처음이야. 대강 프롬이라고 불리는 듯 해."
+    m "원래는 고등학교에서 하는 행사라고 하는데...우리 학교에서는 4학년의 졸업 파티같이 하는 모양이야."
+    m "그래서 그 자리를 브랜든과 함께하고 싶었어. 브랜든이 학교를 다니는 동안 나를 많이 도와줬잖아."
+    b "아냐....내가 무슨... 마리아가 열심히 한 거야."
+    m "브랜든이 있었으니까 열심히 할 수 있던 거지."
+    m "그래서... 이번에 함께 즐겁게 축제를 즐기는 것도 괜찮을 것 같아."
+    b "응. 꼭 갈게."
+    b "....나를 불러줘서 고마워."
+    m "응? 아차, 해리도 괜찮으면 같이 와달라고 해 줄 수 있을까?"
+    b "해리...?"
+    m "응, 친구는 여럿인 게 좋잖아. 그래서..."
+    
+    show brandon uh at left
+    
+    b "응. 그럼 그렇게 전할게. 그 때 만나자."
+    
+    hide brandon
+    hide maria
+    
+    stop music fadeout 3.0
+    
+    "브랜든과 약속을 잡고 나자 갑작스레 생각나는 게 있었다."
+    "...."
+    
+    "분명, 드레스를....입고 오는 거라고 했는데."
+    "드레스...?"
+    "옷을 많이 사는 타입이 아니어서 항상 비슷한 옷들만 입고 다녔는데...드레스라니."
+    "아무래도 그런 쪽에는 별로 아는 게 없다."
+    "이런 건 칼드웰 아저씨꼐 여쭤보는 편이 좋을 것 같다."
+    
+    show maria default at right with dissolve
+    
+    m "아저씨께 전화를 드려볼까."
+    m "여보세요?"
+    
+    show daddy default at left with dissolve
+    
+    d "아, 마리아. 이게 얼마만인가.... 여보세요?"
+    d "전화를 내가 먼저 걸었어야 했는데... 마리아가 바쁠까봐 그러지 못했단다."
+    d "잘 지냈니? 어쩐 일이니..."
+    
+    "아저씨께서는 간만에 전화한 나를 아주 반갑게 맞아주셨다."
+    "정말...내 생각뿐인 분이시다."
+    
+    show maria sad at right
+    
+    m "칼드웰 아저씨, 죄송해요. 그간...이것저것 바빠서."
+    d "전에는 브랜든 군 얘기 뿐이더니, 잘 안 되고 있는 거니?"
+    
+    show maria eyeclosed_blushed at right
+    
+    "사실, 아저씨께 좀 더 초반에는 전화를 많이 드렸었는데...."
+    "어쩌다 보니 브랜든의 이야기만 잔뜩 하게 된 것이다."
+    "그래도 저렇게 말씀하시니, 영 멋쩍어졌다."
+    
+    m "아ㅡ 아니예요. 학교 프롬 때문에 전화 드린 거라구요."
+    d "아, 벌써 마리아가 4학년인가. 행사를 지낼 때가 되었구나."
+    d "그래, 리무진은 몇 대 필요하니?"
+    
+    play sound "/bgm/Cartoon_Cowbell.mp3"
+    
+    show maria frightened at right with dissolve
+    
+    "....."
+    "이래서, 따로 나와서 살기로 한 거였다."
+    "칼드웰 아저씨는, 굉장한 회사의 CEO로...대저택에서 살고 계시다."
+    "얼마나 집이 큰지 과장하면 우리 대학만큼 집이 큰 것 같다."
+    "처음에 이사왔을 때는 거기서 잠시 묵었지만, 도저히 부담스러워서 대학과 멀다는 이유로 내 방을 구했다."
+    "물론, 이 집도 칼드웰 아저씨가 구해 주신 거지만..."
+    
+    "그런 성같은 대저택에서 산다는 건 역시 어색하다."
+    
+    m "아니예요! 리무진이라니 ㅡ 저는 그냥 드레스를 사려고..."
+    d "아, 드레스! 맞아. 드레스를 사러 가지 않으면 안 되겠구나."
+    d "혹시 주말에 시간이 나면 백화점을 같이 들르면 어떻겠니, 마리아?"
+    d "불편하다면 혼자 가도 괜찮단다."
+    
+    show maria default at right
+    
+    "칼드웰 아저씨는 항상 나를 먼저 배려해 주셔서, 내가 불편할까봐 내게 너무 자주 연락을 하시거나 불쑥 찾아오시지 않는 등...굉장한 신사셨다."
+    "단지 자금을 지원해주시는 것 만이 아니라, 나를 가족으로써 생각하고 존중해주시는 거겠지."
+    "아저씨와 만난 적이 오래되었는데... 어떻게 할까?"
+    
+    menu:
+ 
+        "아저씨와 함께 가자.":              
+              
+              jump yes_daddy
+ 
+        "혼자 가고 싶다.":
+              
+              jump no_daddy
+              
+label yes_daddy :
+    
+    "벌써 아저씨를 안 본 지도 꽤 되어간다."
+    "초반에는 자주 저택에 들렀던 것 같은데... 나도 학교 생활이 바쁘고 하면서 자주 신경쓰지를 못했다."
+    "그래서, 칼드웰 아저씨와 간만에 만나는 것도 좋은 선택이라고 생각했다."
+    
+    m "네, 물론이죠."
+    m "그럼 주말에 백화점 앞에서 뵈어요!"
+    d "그래, 그러자꾸나."
+    
+    hide daddy
+    hide maria
+    
+    jump prom2
+    
+label no_daddy :
+    
+    "쇼핑을 하는 데 아저씨도 따라오시면 조금 불편하지 않을까?"
+    "아저씨가 지루해하실지도 모른다."
+    
+    m "음... 아, 그럼 저 혼자 갈까 해요."
+    d "그래. 드레스를 살 곳은 정해놓았니?"
+    
+    "아차."
+    "...드레스라니 전혀 내 분야가 아니다."
+    "아저씨께 여쭤보아야 겠는데...어떡하지?"
+    
+    m "음...아니요..."
+    d "...내가 아는 테일러 샵이 있는데, 괜찮다면 내가 안내해주고 마리아가 스스로 고르는 것은 어떻겠니?"
+    m "전 아저씨가 지루해하시거나 바쁘실까 봐..."
+    d "마리아와 간만에 만날 수 있는 기회인데, 다른 무엇보다도 중요하지 않겠니?"
+    d "그럼, 주말에 백화점 앞에서 보자꾸나."
+    m "네, 감사합니다."
+    
+    hide daddy
+    hide maria
+    
+    jump prom2
+
+label prom2 :
+    
+    show bg department_store with fade
+    
+    "주말에 일어나 아저씨와 약속한 백화점으로 향했다."
+
+label prom3 :
+    
+    #밥 쳐먹고 사교 댄스
+
+label prom4 :
+    
+    #페벌  
+    
 
 #졸업하는 마리아
 label interlude12 :
