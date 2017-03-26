@@ -27,6 +27,11 @@ image bg ice = im.Scale("/bg/icecream_shop.jpg", 800, 950)
 image bg optitian = "/bg/optitian.jpg"
 image bg tailor1 = "/bg/tailor_shop.jpg"
 image bg tailor2 = "/bg/tailor_shop2.jpg"
+image bg dress_shop1 = im.Scale("/bg/dress_shop1.jpg", 800, 700)
+image bg dress_shop2 = im.Scale("/bg/dress_shop2.jpg", 800, 700)
+image bg shoe_shop = "/bg/shoe_shop.jpg"
+image bg bag_shop = "/bg/bag_shop.jpg"
+
 
 #원래 살던 곳
 image bg poorlandscape = im.Scale("/bg/poor_road.jpg", 1000, 1050)
@@ -91,7 +96,6 @@ image maria default = im.Scale("m_default.png", 250, 500)
 image maria angry = im.Scale("m_angry.png", 250, 500)
 image maria cryout = im.Scale("m_cryout.png", 250, 500)
 image maria default_blush = im.Scale("m_default_blush.png", 250, 500)
-image maria dress = im.Scale("m_dress.png", 250, 500)
 image maria eyeclosed = im.Scale("m_eyeclosed.png", 250, 500)
 image maria eyeclosed_blushed = im.Scale("m_eyeclosed_blush.png", 250, 500)
 image maria frightened = im.Scale("m_frightened.png", 250, 500)
@@ -100,6 +104,22 @@ image maria sad = im.Scale("m_sad.png", 250, 500)
 image maria sad_cry = im.Scale("m_sad_cry.png", 250, 500)
 image maria smile = im.Scale("m_smile.png", 250, 500)
 image maria smile_blush = im.Scale("m_smile_blush.png", 250, 500)
+
+
+image maria dress = im.Scale("m_dress.png", 250, 500)
+image maria d_angry = im.Scale("md_angry.png", 250, 500)
+image maria d_blush = im.Scale("md_blush.png", 250, 500)
+image maria d_cryout = im.Scale("md_cryout.png", 250, 500)
+image maria d_eyeclosed = im.Scale("md_eyeclosed.png", 250, 500)
+image maria d_eyeclosed_blush = im.Scale("md_eyeclosed_blush.png", 250, 500)
+image maria d_frightened = im.Scale("md_frightened.png", 250, 500)
+image maria d_frightened_blush = im.Scale("md_frightened_blush.png", 250, 500)
+image maria d_frightened_cry = im.Scale("md_frightened_cry.png", 250, 500)
+image maria d_sad = im.Scale("md_sad.png", 250, 500)
+image maria d_sad_cry = im.Scale("md_sad_cry.png", 250, 500)
+image maria d_smile = im.Scale("md_smile.png", 250, 500)
+image maria d_smile_blush = im.Scale("md_smile_blush.png", 250, 500)
+
 
 image harry default = im.Scale("h_default.png", 280, 580)
 image harry deadsmile = im.Scale("h_deadsmile.png", 280, 580)
@@ -3445,7 +3465,15 @@ label prom :
     "그 후, 브랜든과 몇 번 더 만나 함께 식사를 하거나, 여러가지 일을 하며 시간을 보냈다."
     "또 해가 지나가, 어느새 대학교 4학년이다."
     "여기로 이사오면서, 대학교에 입학한 게 엊그제 같은데 벌써 졸업할 학년인가."
+    
+    "처음에 이사와서 대학교에 입학한 후, 브랜든을 만나고 이러저러한 일들이 있었다."
+    "처음으로 브랜든과의 사이에 조금 균열도 생겨 보고, 다시 만나서 화해하기도 했다."
+    "나름 우리 사이의 관계에도 이 4년간 발전이 있었다고 봐도 되겠지."
+    
     "4학년이 되니 거의 수업보다는, 여러가지 취업 컨설팅이나 특강을 듣느라 정신이 없었다."
+    "아무래도 취업 시즌이 다가오니 전보다 바빠지는 것이다."
+    "마음도 조급하고, 여러모로 많이 피곤했다."
+    "조금 쉬어갈 일도 있으면 좋겠는데...."
     
     scene bg univ2 with fade
     
@@ -3459,7 +3487,7 @@ label prom :
     
     show maria smile with dissolve
     
-    m "나름, 4년간 발전했다는 건가?"
+    m "나름, 4년간 배워왔다는 건가?"
     
     "4년간, 나의 진로에 대해서도 많이 고민해봤다."
     "물론 당장 먹고 살 돈이 부족하다거나 한 것은 아니다. 칼드웰 아저씨께서 항상 지원해주시기 때문에..."
@@ -3474,6 +3502,12 @@ label prom :
     "외려 예의에 어긋나는 짓일지도."
     
     m "그렇지만, 아저씨께 받은 게 너무 많기 때문에... 무어라도 갚고 싶은 거지."
+    
+    "아저씨께서는 단지, 삼촌과 젊은 시절 아주 친한 친구셨다는 사실 하나만으로 나를 맡아주셨다."
+    "삼촌이 돌아가신 후, 홀로 혈혈단신으로 남은 나를 거둬주신 분이시다."
+    "거기에 이렇게 분에 넘치는 지원을 받고 있다."
+    "집도, 대학도... 거기에 여러가지 강의를 듣게 해 주시거나... 나를 위해 돈을 아끼지 않으신다."
+    "그런 아저씨에게 무언가 꼭 보답하고 싶다."
     
     "그러려면, 역시 더 열심히 공부하지 않으면."
     "그렇게 생각하며 도서관으로 향했다."
@@ -3504,6 +3538,8 @@ label prom :
     prom2 "친구들도 불러야 하는데, 미리 말해두려구."
     prom2 "이번에는 유명한 락 밴드도 온대서, 친구들 여럿 불러서 같이 놀 생각이야!"
     
+    show maria frightened
+    
     "와, 우리 학교에 저런 축제도 있었던가?"
     "4학년이 될 때 까지 왜 모르고 있었지.... 충격적이다."
     
@@ -3511,6 +3547,8 @@ label prom :
     prom2 "그래도 축제니까 준비는 해 둬야지, 안 그래?"
     prom2 "나도 알렌 선배가 같이 가자고 하지 않을까? 아니려나...."
     prom1 "꿈도 크셔!"
+    
+    show maria smile
     
     "귀가 솔깃해졌다."
     "다음에 친구들에게 프롬에 대해 물어보는것이 좋겠다."
@@ -3558,7 +3596,9 @@ label prom :
     show maria eyeclosed
     
     m "음... 잘생긴 건 맞지. 잘 생겼는데..."
-    f "어머, 마리아. 잘 생기면 된 거지 남자는. 안 그래? 그럼 그 분도 같이 오시는 걸로 ㅡ "
+    f "어머, 마리아. 잘 생기면 된 거지 남자는. 안 그래?"
+    f "남자는 얼굴!"
+    f "그럼 그 분도 나중에 같이 오시는 걸로 ㅡ "
     
     show maria frightened
     
@@ -3573,7 +3613,12 @@ label prom :
     show bg room2 with fade
     
     stop music fadeout 3.0
-    "시험이 끝나고, 프롬에 초대할 사람을 구해야겠다고 생각한 나는, 브랜든에게 우선 전화했다."
+    
+    "우선, 시험이 우선이었기 때문에 정말 열심히 공부했다."
+    "아직 점수는 나오지 않았지만, 학교는 이미 프롬 이야기로 시끌벅적했다."
+    "4학년들이 주인공인 자리였기 때문에, 다들 파트너를 구하는 데 정신이 없었다."
+    "학교 내에서 서로 파트너를 신청해 보는 등, 아주 분홍빛이 감돌고 있었다."
+    "나도 슬슬 프롬에 초대할 사람을 구해야겠다고 생각한 나는, 브랜든에게 우선 전화했다."
     
     show maria smile at right
     
@@ -3792,8 +3837,150 @@ label no_daddy :
 label prom2 :
     
     show bg department_store with fade
+    play music "/bgm/7th_Floor_Tango.mp3" fadein 1.0 fadeout 4.0 loop
     
     "주말에 일어나 아저씨와 약속한 백화점으로 향했다."
+    "아저씨께서는 교양이 높으시고, 이것저것 사회 경험도 많으시니까... 나 보다는 드레스 고르기에 안목이 있지 않으실까?"
+    "사실 무슨 옷을 입어야 할 지도 걱정이었기 때문에, 아저씨가 선뜻 도와주러 온다고 해 주셔서 너무나도 감사했다."
+    
+    show daddy default at left with easeinleft
+    show maria default at right with easeinright
+    
+    d "마리아, 많이 기다렸니?"
+    d "미안하다, 차가 많이 막히는 바람에...."
+    
+    "약속시간에서 30초도 지나지 않았지만, 아저씨는 헐레벌떡 뛰어오며 내게 사과하셨다."
+    
+    m "아니예요, 저도 방금 왔어요. 주차하고 오시느라 늦으신 걸요 뭘."
+    d "아니야, 미안하다. 먼저 와서 기다렸어야 했는데.... 목마르거나 하지는 않니?"
+    m "아, 괜찮아요. 안은 시원한걸요."
+    
+    "여름이 한창이라, 오는데 날이 조금 더웠다."
+    "아저씨께서는 내게 차를 운전하고 다니라며 면허를 따라고 했지만, 아직 따지 않았다."
+    "아무래도 아저씨께서 주실 차가 너무 고급스러운 세단이기도 했고...."
+    "기회가 되면 이번 여름방학에 따 둬야지."
+    
+    m "음... 그래도, 뭐라도 마실까요?"
+    d "아, 그러면 15층에 아는 디저트 카페가 하나 있단다."
+    
+    "아저씨는 백화점 안 쪽의 엘레베이터로 가서, 14층을 누르셨다."
+    
+    play sound "/bgm/elevator.wav"
+    
+    m "15층...?"
+    d "아, 거기서부터는 VIP존이라. 카드를 찍고 출입하면 된단다."
+    
+    show maria frightened at right
+    
+    "......"
+    
+    "언제 생각해도 정말 사는 세계가 다르다...."
+    "한 회사의 CEO라면 당연하겠지..."
+    "문득 다시 아저씨가 살고 계신 엄청나게 큰 저택과 아주 고급스러운 차들만 있는 차고가 생각났다..."
+    "VIP 존으로 가고 있는 건가, 나 지금...."
+    
+    show maria smile at right
+    play sound "/bgm/elevator.wav"
+                
+    "14층에서 내려서, 환대를 받으며 한 층 더 올라갔다."
+    "한 층 더 올라가자, 아주 고급스러워 보이는 카페가 보였다."
+    
+    show bg dessert_cafe with fade
+    
+    play sound "/bgm/Coffee_Shop.mp3"
+    
+    m "와...!"
+    m "엄청 고급스럽네요."
+    d "아아, 마음에 드니. 마리아. 가볍게 먹고, 드레스를 고르러 가자꾸나."
+    d "메뉴에서 먹고 싶은 것을 고르렴."
+    m "네... 음... 음...?"
+    
+    "메뉴판이 불어로 적혀져 있다...."
+    "아니, 불어라기보다는.... 프랑스식 요리들이 가득 있어서 뭐가 뭔지 모르겠다."
+    
+    "대강 그럴듯한 걸 주문하기로 했다."
+    m "음...전, 이걸로?"    
+    d "네, 그럼. 피스타치오 레드후르츠 타르트와, 프로즌 오트 초콜릿을 부탁드립니다."
+    d "마리아, 홍차 세트를 함께 주문하려고 하는데... 괜찮니?"
+    m "아, 네!"
+    
+    show maria default at right
+    
+    "조금 기다리자 아주 고급스러워 보이는 디저트들이 나왔다."
+    "한 입 떠 먹어 보니, 정말로 달콤하고 맛있었다."
+    
+    m "맛있어...."
+    
+    play sound "/bgm/Drink_and_Swallow.mp3"
+    
+    "같이 나온 홍차와 곁들이니 더욱더 완벽한 맛이었다."
+    "오늘, 드레스를 고르러 나왔을 뿐인데 이런 멋진 곳에 데려와주신 아저씨께 너무 고마웠다."
+    
+    m "정말 맛있어요. 이런 곳은 어떻게 아신 거예요?"
+    m "자주 오시는 곳인가요?"
+    
+    d "아, 메뉴를 보느라고 가끔 들른단다."
+    d "참고하기 좋거든."
+    
+    m "메뉴를? 음~"
+    
+    "칼드웰 아저씨께서 하는 사업 중 이런 식음료 사업도 있는 걸까?"
+    "신나서 디저트를 먹느라고, 그 질문은 입 안으로 달콤한 디저트들과 함께 넘어갔다."
+    
+    d "천천히 먹고, 드레스를 고르러 내려가면 되겠다."
+    d "마리아의 마음에 드니 다행이네..."
+    
+    "아저씨와 즐겁게 디저트를 먹으며 대학생활에 대해 얘기했다."
+    
+    m "그래도 다행이예요 ㅡ 아저씨 덕에 사교댄스를 배워놓아서."
+    m "사실 춤을 추라니, 예전의 저였다면 생각도 못 할 일이라... 아마 참가하지도 않았을 걸요."
+    m "거기에 드레스라니!"
+    
+    d "마리아는 워낙 검소해서 더 그럴지도 모르겠구나. 전부터 몇 벌은 드레스라거나.. 사교를 위한 옷을 사두는 게 좋다고 했는데.."
+    
+    "그랬다간 아저씨와 함께 블랙 카드로 몇백만원어치의 옷을 샀을지 모른다."
+    "그런 건 너무 부담스러운데다, 확실히...드레스를 사 둬도 입을 일이 전혀 없을 거라고 생각해서 거절했다."
+    "오늘은 기왕 사러 온 거, 예쁜 옷으로 고르고 싶다."
+    "나중에 기회가 있으면 다시 입게 될 지도 모르고...대학교의 마지막이니까."
+    
+    m "아니예요! 아니예요. 오늘 한 벌 사면 되니까요, 그걸로 입으면 돼요."
+    
+    "손사래를 치고 홍차를 다 마신 후, 아저씨와 계산하고 아래로 내려왔다."
+    
+    show bg department_store with fade
+    
+    "음... 드레스를 파는 곳은 어디로 가봐야 하지..."
+    
+    d "드레스를 전문적으로 다루는 곳은 이 쪽으로 나오면 있단다."
+    
+    "아저씨가 둘러보는 나를 안내해 주셔서, 그 쪽으로 걸어갔다."
+    
+    stop music fadeout 4.0
+    play sound "/bgm/walk.wav"
+    
+    show bg dress_shop1 with fade
+    
+    "도착한 곳은 건물에서 밖으로 나와 있는 곳의 드레스 샵이었다."
+    "문 앞에 서니 뭔가... 내가 이런 옷을 입을 수 있는가...? 에 대한 의문마저 들기 시작했다."
+    "항상 편한 옷을 고집해 온 데다, 옷이나 신발...등 여러가지를 많이 사는 타입도 아니었다."
+    "칼드웰 아저씨는 항상 필요한 게 있으면 말하라며 성화셨지만... 그냥 이렇게 편하게 다니는 것이 좋다."
+    "그런데 드레스라니, 이런..."
+    "문 앞에서 망설이고 있으니, 칼드웰 아저씨께서 문을 열어주며 안내해주셨다."
+    
+    play sound "/bgm/door.wav"
+    
+    d "자, 마리아. 들어가렴"
+    
+    show bg dress_shop2 with fade
+    
+    "안에는 멋진 드레스들이 잔뜩 있었다."
+    
+    hide maria
+    hide daddy
+    show maria dress
+    
+    "Dd"
+    
 
 label prom3 :
     
@@ -3805,6 +3992,7 @@ label prom4 :
     
 
 #졸업하는 마리아
+#분량 추가 필요
 label interlude12 :
     stop music fadeout 4.0
     hide maria
