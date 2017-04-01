@@ -91,7 +91,6 @@ image maria default = im.Scale("m_default.png", 250, 500)
 image maria angry = im.Scale("m_angry.png", 250, 500)
 image maria cryout = im.Scale("m_cryout.png", 250, 500)
 image maria default_blush = im.Scale("m_default_blush.png", 250, 500)
-image maria dress = im.Scale("m_dress.png", 250, 500)
 image maria eyeclosed = im.Scale("m_eyeclosed.png", 250, 500)
 image maria eyeclosed_blushed = im.Scale("m_eyeclosed_blush.png", 250, 500)
 image maria frightened = im.Scale("m_frightened.png", 250, 500)
@@ -100,6 +99,22 @@ image maria sad = im.Scale("m_sad.png", 250, 500)
 image maria sad_cry = im.Scale("m_sad_cry.png", 250, 500)
 image maria smile = im.Scale("m_smile.png", 250, 500)
 image maria smile_blush = im.Scale("m_smile_blush.png", 250, 500)
+
+
+image maria dress = im.Scale("m_dress.png", 250, 500)
+image maria d_angry = im.Scale("md_angry.png", 250, 500)
+image maria d_blush = im.Scale("md_blush.png", 250, 500)
+image maria d_cryout = im.Scale("md_cryout.png", 250, 500)
+image maria d_eyeclosed = im.Scale("md_eyeclosed.png", 250, 500)
+image maria d_eyeclosed_blush = im.Scale("md_eyeclosed_blush.png", 250, 500)
+image maria d_frightened = im.Scale("md_frightened.png", 250, 500)
+image maria d_frightened_blush = im.Scale("md_frightened_blush.png", 250, 500)
+image maria d_frightened_cry = im.Scale("md_frightened_cry.png", 250, 500)
+image maria d_sad = im.Scale("md_sad.png", 250, 500)
+image maria d_sad_cry = im.Scale("md_sad_cry.png", 250, 500)
+image maria d_smile = im.Scale("md_smile.png", 250, 500)
+image maria d_smile_blush = im.Scale("md_smile_blush.png", 250, 500)
+
 
 image harry default = im.Scale("h_default.png", 280, 580)
 image harry deadsmile = im.Scale("h_deadsmile.png", 280, 580)
@@ -3504,6 +3519,8 @@ label prom :
     prom2 "친구들도 불러야 하는데, 미리 말해두려구."
     prom2 "이번에는 유명한 락 밴드도 온대서, 친구들 여럿 불러서 같이 놀 생각이야!"
     
+    show maria frightened
+    
     "와, 우리 학교에 저런 축제도 있었던가?"
     "4학년이 될 때 까지 왜 모르고 있었지.... 충격적이다."
     
@@ -3511,6 +3528,8 @@ label prom :
     prom2 "그래도 축제니까 준비는 해 둬야지, 안 그래?"
     prom2 "나도 알렌 선배가 같이 가자고 하지 않을까? 아니려나...."
     prom1 "꿈도 크셔!"
+    
+    show maria smile
     
     "귀가 솔깃해졌다."
     "다음에 친구들에게 프롬에 대해 물어보는것이 좋겠다."
